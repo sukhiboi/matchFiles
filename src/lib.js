@@ -1,12 +1,13 @@
 const fs = require('fs');
 
 const getLines = function(filename) {
-  const contents = fs.readFileSync(filename, 'utf8').split('\n');
+  const contents = fs.readFileSync(filename, 'utf8');
   return contents;
 };
 
-const getSuffix = function(contents) {
+const getSuffix = function(fileContents) {
   let words = {}; 
+  let contents = fileContents.split('\n');
   contents.map(function(word){
     let wordName = word.slice(-4);
     words[wordName] = word
@@ -17,8 +18,9 @@ const getSuffix = function(contents) {
 const joinWords = function(contents, file2Lines) {
   let finalWords = [];
   let suffixs = getSuffix(contents);
+  const lines = file2Lines.split('\n');
 
-  file2Lines.map(function(word){
+  lines.map(function(word){
     finalWords.push(suffixs[word.slice(0,4)].slice(0,2) + word);  
   })
 
@@ -26,4 +28,5 @@ const joinWords = function(contents, file2Lines) {
 };
 
 exports.getLines = getLines;
+exports.getSuffix = getSuffix;
 exports.joinWords = joinWords;

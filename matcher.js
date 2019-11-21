@@ -8,7 +8,7 @@ const contentOfFile = [
 ];
 
 const main = function() {
-  const words = joinWords(contentOfFile[0], contentOfFile[1]);
+  const words = lib.joinWords(contentOfFile[0], contentOfFile[1]);
   console.log(words);
 };
 
