@@ -21,7 +21,7 @@ const joinWords = function(contents, file2Lines) {
   const lines = file2Lines.split('\n');
 
   lines.map(function(word){
-    finalWords.push(suffixs[word.slice(0,4)].slice(0,3) + word);  
+    finalWords.push(suffixs[word.slice(0,4)].slice(0,2) + word);  
   })
 
   return finalWords;
