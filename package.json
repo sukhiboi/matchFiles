@@ -1,0 +1,25 @@
+{
+  "name": "matchfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "matcher.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukhiboi/matchFiles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sukhiboi/matchFiles/issues"
+  },
+  "homepage": "https://github.com/sukhiboi/matchFiles#readme",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
+}
